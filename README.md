@@ -1,4 +1,12 @@
-# image-template
+[![Build container image](https://github.com/lotsospaghetti/hedgehogOS/actions/workflows/build.yml/badge.svg)](https://github.com/lotsospaghetti/hedgehogOS/actions/workflows/build.yml)
+
+# hedgehogOS
+
+My personal [Bazzite](https://github.com/ublue-os/bazzite) image built specifically for my gaming computer's hardware. Also simply a testbed for me to learn how custom Fedora Atomic images work.
+
+It's called 'hedgehogOS' purely because it sports the [ASRock Z790 PG SONIC motherboard](https://pcpartpicker.com/product/y4KKHx/asrock-z790-pg-sonic-atx-lga1700-motherboard-z790-pg-sonic) lol
+
+# Original template's README
 
 This repository is meant to be a template for building your own custom [bootc](https://github.com/bootc-dev/bootc) image. This template is the recommended way to make customizations to any image published by the Universal Blue Project.
 
