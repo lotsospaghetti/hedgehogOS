@@ -4,7 +4,18 @@
 
 My personal [Bazzite](https://github.com/ublue-os/bazzite) image built specifically for my gaming computer's hardware. Also simply a testbed for me to learn how custom Fedora Atomic images work.
 
-It's called 'hedgehogOS' purely because it sports the [ASRock Z790 PG SONIC motherboard](https://pcpartpicker.com/product/y4KKHx/asrock-z790-pg-sonic-atx-lga1700-motherboard-z790-pg-sonic) lol
+It's called 'hedgehogOS' purely because my PC sports the [ASRock Z790 PG SONIC motherboard](https://pcpartpicker.com/product/y4KKHx/asrock-z790-pg-sonic-atx-lga1700-motherboard-z790-pg-sonic) lol
+
+# Additional features
+
+- `awesfx` and `fluid-soundfont-gm` installed for MIDI soundcard support
+- `atkinson-hyperlegible-next` and `atkinson-hyperlegible-mono` fonts preinstalled
+
+# TODOs:
+
+- [ ] configure `awesfx` to load a soundfont on startup
+- [ ] configure Atkinson Hyperlegible fonts as the defaults in KDE
+- [ ] make a separate package for image optimizations targeting my specific hardware
 
 # Original template's README
 
