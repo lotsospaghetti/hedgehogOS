@@ -8,7 +8,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # install some packages
-dnf5 -y install awesfx fluid-soundfont-gm
+dnf5 -y install awesfx fluid-soundfont-gm fluid-soundfont-gs
 dnf5 -y copr enable julicen/atkinson-hyperlegible-fonts
 dnf5 -y install atkinson-hyperlegible-mono-fonts atkinson-hyperlegible-next-fonts
 dnf5 -y copr disable julicen/atkinson-hyperlegible-fonts

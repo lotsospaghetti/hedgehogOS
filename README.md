@@ -8,14 +8,15 @@ It's called 'hedgehogOS' purely because my PC sports the [ASRock Z790 PG SONIC m
 
 # Additional features
 
-- `awesfx` and `fluid-soundfont-gm` installed for MIDI soundcard support
+- `awesfx` installed for MIDI soundcard support, as well as fluid-soundfont packages
 - `atkinson-hyperlegible-next` and `atkinson-hyperlegible-mono` fonts preinstalled
 
 # TODOs:
 
-- [ ] configure `awesfx` to load a soundfont on startup
+- [ ] make `ujust setup-midi` script that optionally downloads a specified .sf2 file and sets up an autostart script for loading a soundfont on startup with `awesfx`
 - [ ] configure Atkinson Hyperlegible fonts as the defaults in KDE
 - [ ] make a separate package for image optimizations targeting my specific hardware
+- [ ] make `ujust install-unleashed-recompiled` as a convenience script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)
 
 # Original template's README
 
