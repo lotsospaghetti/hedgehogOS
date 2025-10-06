@@ -1,5 +1,19 @@
+# Install all hedgehogOS apps
+[group('hedgehogOS-apps')]
+hedge-install-apps: hedge-install-flatpaks hedge-install-unleashed
+
+# Install hedgehogOS Flatpaks from Flathub
+[group('hedgehogOS-apps)']
+hedge-install-flatpaks:
+    #!/usr/bin/bash
+    set -euo pipefail
+
+    echo "Installing Flatpaks..."
+    xargs -a <(curl --retry 3 -sL https://raw.githubusercontent.com/lotsospaghetti/hedgehogOS/main/repo_files/flatpaks) flatpak --system -y install
+    echo "Flatpaks installed!"
+
 # Download and install Unleashed Recompiled as a Flatpak (you will need to provide your own game assets! see https://github.com/hedge-dev/UnleashedRecomp?tab=readme-ov-file#how-to-install)
-[group('gaming')]
+[group('hedgehogOS-gaming')]
 hedge-install-unleashed:
     #!/usr/bin/bash
     set -euo pipefail
@@ -8,7 +22,7 @@ hedge-install-unleashed:
 
     echo "Getting and installing Unleashed Recompiled..."
     # get latest flatpak using this trick https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
-    curl -s https://api.github.com/repos/hedge-dev/UnleashedRecomp/releases/latest \
+    curl --retry 3 -s https://api.github.com/repos/hedge-dev/UnleashedRecomp/releases/latest \
     | grep "browser_download_url.*-Flatpak.zip" \
     | cut -d : -f 2,3 \
     | tr -d \" \
@@ -28,3 +42,16 @@ hedge-install-unleashed:
       exit 1
     fi
     echo "Successfully installed Unleashed Recompiled!"
+
+# Set up or manage a Dawbox container (see https://github.com/Messaiga/DAWbox)
+[group ('hedgehogOS-audio')]
+hedge-setup-dawbox:
+    #!/usr/bin/bash
+
+    # this ujust command is... 'just' a wrapper for the actual setup script provided on the dawbox github page
+    curl --retry 3 -sL https://raw.githubusercontent.com/Messaiga/DAWbox/refs/heads/main/install.sh -o install.sh && chmod +x install.sh && ./install.sh
+
+    # run fc-cache as the readme suggests to ensure fonts work in programs
+    if [ $(distrobox list | grep 'ghcr.io/messaiga/dawbox:latest' | echo $?) -eq 0 ]; then
+      distrobox-enter dawbox -- sudo fc-cache -Ers
+    fi

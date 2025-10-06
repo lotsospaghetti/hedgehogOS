@@ -11,12 +11,22 @@ It's called 'hedgehogOS' purely because my PC sports the [ASRock Z790 PG SONIC m
 - `awesfx` installed for MIDI soundcard support, as well as fluid-soundfont packages
 - `atkinson-hyperlegible-next` and `atkinson-hyperlegible-mono` fonts preinstalled
 - Custom installer script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)
+- Wrapper script for installing and managing [Dawbox](https://github.com/Messaiga/DAWbox)
 
 # Custom `ujust` scripts
 
 ```
+# Install all hedgehogOS apps
+ujust hedge-install-apps
+
+# Install hedgehogOS Flatpaks from Flathub
+ujust hedge-install-flatpaks
+
 # Download and install Unleashed Recompiled as a Flatpak (you will need to provide your own game assets! see https://github.com/hedge-dev/UnleashedRecomp?tab=readme-ov-file#how-to-install)
 ujust hedge-install-unleashed
+
+# Set up or manage a Dawbox container (see https://github.com/Messaiga/DAWbox)
+ujust hedge-setup-dawbox
 ```
 
 # TODOs:
