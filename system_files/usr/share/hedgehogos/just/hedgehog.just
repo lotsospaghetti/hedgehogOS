@@ -12,6 +12,10 @@ hedge-install-flatpaks:
     xargs -a <(curl --retry 3 -sL https://raw.githubusercontent.com/lotsospaghetti/hedgehogOS/main/repo_files/flatpaks) flatpak --system -y install
     echo "Flatpaks installed!"
 
+    echo "Applying Flatpak overrides... (require sudo)"
+    sudo flatpak override org.kde.skanlite --filesystem=home
+    echo "Overrides applied!"
+
 # Download and install Unleashed Recompiled as a Flatpak (you will need to provide your own game assets! see https://github.com/hedge-dev/UnleashedRecomp?tab=readme-ov-file#how-to-install)
 [group('hedgehogOS-gaming')]
 hedge-install-unleashed:
