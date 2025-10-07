@@ -3,7 +3,7 @@
 hedge-install-apps: hedge-install-flatpaks hedge-install-unleashed
 
 # Install hedgehogOS Flatpaks from Flathub
-[group('hedgehogOS-apps)']
+[group('hedgehogOS-apps')]
 hedge-install-flatpaks:
     #!/usr/bin/bash
     set -euo pipefail
