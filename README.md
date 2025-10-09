@@ -26,7 +26,7 @@ ujust hedge-install-flatpaks
 ujust hedge-install-unleashed
 
 # Set up or manage a Dawbox container (see https://github.com/Messaiga/DAWbox)
-ujust hedge-setup-dawbox
+ujust hedge-setup-dawbox <option>
 ```
 
 # TODOs:
@@ -35,6 +35,7 @@ ujust hedge-setup-dawbox
 - [ ] configure Atkinson Hyperlegible fonts as the defaults in KDE
 - [ ] make a separate package for image optimizations targeting my specific hardware
 - [ ] ~~make `ujust install-unleashed-recompiled` as a convenience script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)~~ test `hedge-install-unleashed` script
+- [ ] test `hedge-setup-dawbox` script
 
 # Original template's README
 
