@@ -30,7 +30,7 @@ hedge-install-unleashed:
     | grep "browser_download_url.*-Flatpak.zip" \
     | cut -d : -f 2,3 \
     | tr -d \" \
-    | wget -qi -P "$TEMP_DIR" -
+    | wget -P "$TEMP_DIR" -qi -
 
     if [ ! -f "$TEMP_DIR"/UnleashedRecomp-Flatpak.zip ]; then
       echo "Failed to download zip archive, check your internet connection."
