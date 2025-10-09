@@ -1,3 +1,6 @@
+alias install-unleashed := hedge-install-unleashed
+alias setup-dawbox := hedge-setup-dawbox
+
 # Install all hedgehogOS apps
 [group('hedgehogOS-apps')]
 hedge-install-apps: hedge-install-flatpaks hedge-install-unleashed
@@ -16,7 +19,7 @@ hedge-install-flatpaks:
     sudo flatpak override org.kde.skanlite --filesystem=home
     echo "Overrides applied!"
 
-# Download and install Unleashed Recompiled as a Flatpak (you will need to provide your own game assets! see https://github.com/hedge-dev/UnleashedRecomp?tab=readme-ov-file#how-to-install)
+# Download and install Unleashed Recompiled (you'll need to provide game files yourself!) (https://github.com/hedge-dev/UnleashedRecomp)
 [group('hedgehogOS-gaming')]
 hedge-install-unleashed:
     #!/usr/bin/bash
@@ -47,7 +50,7 @@ hedge-install-unleashed:
     fi
     echo "Successfully installed Unleashed Recompiled!"
 
-# Set up or manage a Dawbox container (see https://github.com/Messaiga/DAWbox)
+# Set up or manage a Dawbox container (https://github.com/Messaiga/DAWbox)
 [group ('hedgehogOS-audio')]
 hedge-setup-dawbox ACTION="":
     #!/usr/bin/bash
