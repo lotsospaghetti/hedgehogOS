@@ -1,5 +1,20 @@
 alias install-unleashed := hedge-install-unleashed
 alias setup-dawbox := hedge-setup-dawbox
+alias config-kde-fonts := hedge-config-kde-fonts
+
+# Set Atkinson Hyperlegible as the default font family in KDE
+[group('hedgehogOS-config')]
+hedge-config-kde-fonts:
+    #!/usr/bin/bash
+    set -euo pipefail
+
+    kwriteconfig6 --group General --key font 'Atkinson Hyperlegible Next Light,10,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular'
+    kwriteconfig6 --group General --key fixed 'Atkinson Hyperlegible Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1'
+    kwriteconfig6 --group General --key menuFont 'Atkinson Hyperlegible Next Light,10,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular'
+    kwriteconfig6 --group General --key toolBarFont 'Atkinson Hyperlegible Next Light,9,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular'
+    kwriteconfig6 --group General --key smallestReadableFont 'Atkinson Hyperlegible Next Light,8,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular'
+
+    echo "KDE fonts applied!"
 
 # Install all hedgehogOS apps
 [group('hedgehogOS-apps')]

@@ -10,29 +10,32 @@ It's called 'hedgehogOS' purely because my PC sports the [ASRock Z790 PG SONIC m
 
 - `awesfx` installed for MIDI soundcard support, as well as fluid-soundfont packages
 - `atkinson-hyperlegible-next` and `atkinson-hyperlegible-mono` fonts preinstalled
-- Custom installer script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)
+- Installer script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)
 - Wrapper script for installing and managing [Dawbox](https://github.com/Messaiga/DAWbox)
 
 # Custom `ujust` scripts
 
 ```
+# Set Atkinson Hyperlegible as the default font family in KDE
+ujust hedge-config-kde-fonts
+
 # Install all hedgehogOS apps
 ujust hedge-install-apps
 
 # Install hedgehogOS Flatpaks from Flathub
 ujust hedge-install-flatpaks
 
-# Download and install Unleashed Recompiled as a Flatpak (you will need to provide your own game assets! see https://github.com/hedge-dev/UnleashedRecomp?tab=readme-ov-file#how-to-install)
+# Download and install Unleashed Recompiled (you'll need to provide game files yourself!) (https://github.com/hedge-dev/UnleashedRecomp)
 ujust hedge-install-unleashed
 
-# Set up or manage a Dawbox container (see https://github.com/Messaiga/DAWbox)
+# Set up or manage a Dawbox container (https://github.com/Messaiga/DAWbox)
 ujust hedge-setup-dawbox <option>
 ```
 
 # TODOs:
 
 - [ ] make `ujust setup-midi` script that optionally downloads a specified .sf2 file and sets up an autostart script for loading a soundfont on startup with `awesfx`
-- [ ] configure Atkinson Hyperlegible fonts as the defaults in KDE
+- [x] configure Atkinson Hyperlegible fonts as the defaults in KDE *(done using an optional ujust script)*
 - [ ] make a separate package for image optimizations targeting my specific hardware
 - [ ] ~~make `ujust install-unleashed-recompiled` as a convenience script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)~~ test `hedge-install-unleashed` script
 - [ ] test `hedge-setup-dawbox` script
