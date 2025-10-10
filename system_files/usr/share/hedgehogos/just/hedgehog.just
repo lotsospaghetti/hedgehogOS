@@ -57,7 +57,7 @@ hedge-install-unleashed:
     echo "Successfully downloaded zip archive..."
 
     unzip "$TEMP_DIR"/UnleashedRecomp-Flatpak.zip -d "$TEMP_DIR"
-    sudo flatpak install -y flatpak install "$TEMP_DIR"/io.github.hedge_dev.unleashedrecomp.flatpak
+    sudo flatpak install -y "$TEMP_DIR"/io.github.hedge_dev.unleashedrecomp.flatpak
 
     if [ $(flatpak list | grep io.github.hedge_dev.unleashedrecomp.flatpak >/dev/null; echo $?) ]; then
       echo "Failed to install flatpak..."
