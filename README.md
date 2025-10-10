@@ -1,6 +1,6 @@
 [![Build container image](https://github.com/lotsospaghetti/hedgehogOS/actions/workflows/build.yml/badge.svg)](https://github.com/lotsospaghetti/hedgehogOS/actions/workflows/build.yml)
 
-# hedgehogOS
+# ![hedgehogOS logo](/assets/hedgehogOS-logo.png)
 
 My personal [Bazzite](https://github.com/ublue-os/bazzite) image built specifically for my gaming computer's hardware. Also simply a testbed for me to learn how custom Fedora Atomic images work.
 
@@ -39,6 +39,7 @@ ujust hedge-setup-dawbox <option>
 - [ ] make a separate package for image optimizations targeting my specific hardware
 - [ ] ~~make `ujust install-unleashed-recompiled` as a convenience script for the [Unleashed Recompiled project](https://github.com/hedge-dev/UnleashedRecomp)~~ test `hedge-install-unleashed` script
 - [ ] test `hedge-setup-dawbox` script
+- [ ] auto-apply hedgehogOS logo as KDE start button
 
 # Original template's README
 
