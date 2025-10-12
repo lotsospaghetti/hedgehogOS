@@ -59,7 +59,7 @@ hedge-install-unleashed:
     unzip "$TEMP_DIR"/UnleashedRecomp-Flatpak.zip -d "$TEMP_DIR"
     sudo flatpak install -y "$TEMP_DIR"/io.github.hedge_dev.unleashedrecomp.flatpak
 
-    if [ $(flatpak list | grep io.github.hedge_dev.unleashedrecomp.flatpak >/dev/null; echo $?) ]; then
+    if [ $(flatpak list | grep io.github.hedge_dev.unleashedrecomp >/dev/null; echo $?) ]; then
       echo "Failed to install flatpak..."
       exit 1
     fi
@@ -69,7 +69,6 @@ hedge-install-unleashed:
 [group ('hedgehogOS-audio')]
 hedge-setup-dawbox ACTION="":
     #!/usr/bin/bash
-    set -euo pipefail
     TEMP_DIR=$(mktemp -d)
     trap 'rm -rf "$TEMP_DIR"' EXIT
 
