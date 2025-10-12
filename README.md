@@ -34,6 +34,7 @@ ujust hedge-setup-dawbox <option>
 
 # TODOs:
 
+- [ ] somehow change DE to [COSMIC](https://system76.com/cosmic) without breaking everything
 - [ ] make `ujust setup-midi` script that optionally downloads a specified .sf2 file and sets up an autostart script for loading a soundfont on startup with `awesfx`
 - [x] configure Atkinson Hyperlegible fonts as the defaults in KDE *(done using an optional ujust script)*
 - [ ] make a separate package for image optimizations targeting my specific hardware
