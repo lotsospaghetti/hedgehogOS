@@ -29,7 +29,7 @@ ujust hedge-install-flatpaks
 ujust hedge-install-unleashed
 
 # Set up or manage a Dawbox container (https://github.com/Messaiga/DAWbox)
-ujust hedge-setup-dawbox <option>
+ujust hedge-setup-dawbox
 ```
 
 # TODOs:
